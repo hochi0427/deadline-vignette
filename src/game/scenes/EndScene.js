@@ -5,6 +5,11 @@ export default class EndScene extends Phaser.Scene {
     super('EndScene')
   }
 
+  preload() {
+    this.load.image('happyTeacher', 'images/happy-teacher.png')
+    this.load.image('angryTeacher', 'images/angry-teacher.png')
+  }
+
   init(data) {
     this.result = data.result || 'fail'
     this.score = data.score || 0
@@ -12,16 +17,21 @@ export default class EndScene extends Phaser.Scene {
 
   create() {
     const isSuccess = this.result === 'success'
+    const teacherTexture = isSuccess ? 'happyTeacher' : 'angryTeacher'
 
-    this.cameras.main.setBackgroundColor(isSuccess ? '#dff5e1' : '#2a2a2a')
+    this.cameras.main.setBackgroundColor(isSuccess ? '#dff5e1' : '#e91818')
 
-    this.add.text(640, 220, isSuccess ? 'Success' : 'Fail', {
+    this.add.image(640, 150, teacherTexture)
+      .setScale(0.5)
+      .setOrigin(0.4)
+
+    this.add.text(640, 290, isSuccess ? 'Success' : 'Fail', {
       fontSize: '56px',
       color: isSuccess ? '#1f5c2f' : '#ffffff',
       fontStyle: 'bold'
     }).setOrigin(0.5)
 
-    this.add.text(640, 320, `Score: ${this.score}`, {
+    this.add.text(640, 380, `Score: ${this.score}`, {
       fontSize: '32px',
       color: isSuccess ? '#1f5c2f' : '#dddddd'
     }).setOrigin(0.5)
@@ -29,7 +39,7 @@ export default class EndScene extends Phaser.Scene {
     const buttonWidth = 240
     const buttonHeight = 64
     const buttonX = 640
-    const buttonY = 430
+    const buttonY = 500
 
     const restartButton = this.add.rectangle(buttonX, buttonY, buttonWidth, buttonHeight, isSuccess ? 0x2f6f40 : 0x555555)
       .setStrokeStyle(2, 0xffffff)
