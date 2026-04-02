@@ -1,38 +1,51 @@
-# deadline-vignette
+🎮 Deadline Vignette Game
 
-This template should help get you started developing with Vue 3 in Vite.
+🔗 Play here:
+https://hochi0427.github.io/deadline-vignette/
 
-## Recommended IDE Setup
+📌 What is a Vignette Game?
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+A vignette game is a short, focused interactive experience that captures a specific moment, emotion, or situation.
+Instead of building a long gameplay progression, vignette games emphasize atmosphere, narrative, and emotional impact within a limited timeframe.
 
-## Recommended Browser Setup
+This project explores the experience of working under pressure late at night, simulating the mental and physical fatigue of approaching a deadline.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+🧠 Concept
 
-## Customize configuration
+In this game, players must type continuously to reach a target word count before time runs out.
+However, as time progresses, the game gradually introduces:
+	•	Increased visual instability (blur, shake)
+	•	Faster and more stressful audio
+	•	Changing environmental cues (10 PM → 2 AM → 5 AM)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+These elements are designed to simulate cognitive overload and fatigue, turning a simple typing task into an immersive emotional experience.
 
-## Project Setup
+⚙️ Technologies Used
 
-```sh
-npm install
-```
+This project is built using:
+	•	Vue 3 + Vite
+Used for structuring the application and managing the frontend environment.
+	•	Phaser 3
+Handles all game-related logic, including:
+	•	Scene management
+	•	Input handling (keyboard typing)
+	•	Animation (tweens)
+	•	Camera effects (shake, zoom, alpha)
+	•	Audio system with dynamic playback rate
 
-### Compile and Hot-Reload for Development
+🎯 Key Features
 
-```sh
-npm run dev
-```
+	•	⌨️ Real-time typing interaction
+	•	✍️ Handwriting visual feedback system
+	•	⏱️ Time-based progression (10 PM → 5 AM)
+	•	🎵 Dynamic audio speed changes
+	•	👁️ Visual distortion effects to simulate fatigue
+	•	⭐ Bonus sentence system for scoring
 
-### Compile and Minify for Production
+🧩 Design Focus
 
-```sh
-npm run build
-```
+This project focuses on:
+	•	Emotional design in games
+	•	Embodied experience of cognitive fatigue
+	•	Minimal mechanics with strong atmosphere
+	•	Bridging interaction and narrative
